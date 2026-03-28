@@ -24,6 +24,7 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-key")
 ALGORITHM = "HS256"
+RIDER_INVITE_CODE = os.getenv("RIDER_INVITE_CODE", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

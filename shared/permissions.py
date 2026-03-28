@@ -32,3 +32,14 @@ class HasRequiredPermission(BasePermission):
                 return False
 
         return required_perm in permissions
+
+
+class IsInternalUser(BasePermission):
+    """
+    Allows access only to users whose account_type is 'internal'.
+    Works with the StatelessUser returned by JWTStatelessAuthentication.
+    """
+    def has_permission(self, request, view):
+        if not request.user or not hasattr(request.user, 'get'):
+            return False
+        return request.user.get('account_type') == 'internal'
