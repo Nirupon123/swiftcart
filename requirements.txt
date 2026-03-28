@@ -1,0 +1,11 @@
+asgiref==3.11.1
+Django==6.0.3
+django-environ==0.13.0
+django-redis==6.0.0
+psycopg2-binary==2.9.11
+redis==7.4.0
+sqlparse==0.5.5
+tzdata==2025.3
+uuid6==2025.0.1
+djangorestframework
+PyJWT
